@@ -1,0 +1,37 @@
+Serial No,Student Name,Father/Mother/Guardian Name,Date of Birth,Gender,Roll Number,Registration Number,Class,Academic Year,Stream,Subject,Theory Marks,Practical Marks,Minimum Marks,Maximum Marks,Obtained Marks
+1,Rahul Kumar,Ram Kumar,2008-03-15,Male,1001,CIOS/2024/1001,10,2024-25,,Hindi,76,0,33,100,76
+1,Rahul Kumar,Ram Kumar,2008-03-15,Male,1001,CIOS/2024/1001,10,2024-25,,English,72,0,33,100,72
+1,Rahul Kumar,Ram Kumar,2008-03-15,Male,1001,CIOS/2024/1001,10,2024-25,,Mathematics,85,0,33,100,85
+1,Rahul Kumar,Ram Kumar,2008-03-15,Male,1001,CIOS/2024/1001,10,2024-25,,Science,58,22,33,100,80
+1,Rahul Kumar,Ram Kumar,2008-03-15,Male,1001,CIOS/2024/1001,10,2024-25,,Social Science,74,0,33,100,74
+1,Rahul Kumar,Ram Kumar,2008-03-15,Male,1001,CIOS/2024/1001,10,2024-25,,Drawing,65,23,33,100,88
+2,Priya Sharma,Suresh Sharma,2007-07-22,Female,1002,CIOS/2024/1002,12,2024-25,Science,Hindi,82,0,33,100,82
+2,Priya Sharma,Suresh Sharma,2007-07-22,Female,1002,CIOS/2024/1002,12,2024-25,Science,English,86,0,33,100,86
+2,Priya Sharma,Suresh Sharma,2007-07-22,Female,1002,CIOS/2024/1002,12,2024-25,Science,Physics,63,28,33,100,91
+2,Priya Sharma,Suresh Sharma,2007-07-22,Female,1002,CIOS/2024/1002,12,2024-25,Science,Chemistry,60,28,33,100,88
+2,Priya Sharma,Suresh Sharma,2007-07-22,Female,1002,CIOS/2024/1002,12,2024-25,Science,Biology,65,29,33,100,94
+2,Priya Sharma,Suresh Sharma,2007-07-22,Female,1002,CIOS/2024/1002,12,2024-25,Science,Mathematics,89,0,33,100,89
+3,Amit Singh,Vijay Singh,2009-11-05,Male,1003,CIOS/2024/1003,8,2024-25,,Hindi,58,0,33,100,58
+3,Amit Singh,Vijay Singh,2009-11-05,Male,1003,CIOS/2024/1003,8,2024-25,,English,54,0,33,100,54
+3,Amit Singh,Vijay Singh,2009-11-05,Male,1003,CIOS/2024/1003,8,2024-25,,Maths,63,0,33,100,63
+3,Amit Singh,Vijay Singh,2009-11-05,Male,1003,CIOS/2024/1003,8,2024-25,,Science,45,15,33,100,60
+3,Amit Singh,Vijay Singh,2009-11-05,Male,1003,CIOS/2024/1003,8,2024-25,,SST,56,0,33,100,56
+3,Amit Singh,Vijay Singh,2009-11-05,Male,1003,CIOS/2024/1003,8,2024-25,,Drawing,50,22,33,100,72
+4,Rohan Gupta,Manoj Gupta,2006-09-14,Male,1004,CIOS/2024/1004,12,2024-25,Commerce,Hindi,70,0,33,100,70
+4,Rohan Gupta,Manoj Gupta,2006-09-14,Male,1004,CIOS/2024/1004,12,2024-25,Commerce,English,78,0,33,100,78
+4,Rohan Gupta,Manoj Gupta,2006-09-14,Male,1004,CIOS/2024/1004,12,2024-25,Commerce,Accountancy,64,20,33,100,84
+4,Rohan Gupta,Manoj Gupta,2006-09-14,Male,1004,CIOS/2024/1004,12,2024-25,Commerce,Business Studies,62,20,33,100,82
+4,Rohan Gupta,Manoj Gupta,2006-09-14,Male,1004,CIOS/2024/1004,12,2024-25,Commerce,Banking,75,0,33,100,75
+4,Rohan Gupta,Manoj Gupta,2006-09-14,Male,1004,CIOS/2024/1004,12,2024-25,Commerce,Economics,61,18,33,100,79
+5,Ananya Mishra,Rajesh Mishra,2007-01-30,Female,1005,CIOS/2024/1005,12,2024-25,Arts,Hindi,84,0,33,100,84
+5,Ananya Mishra,Rajesh Mishra,2007-01-30,Female,1005,CIOS/2024/1005,12,2024-25,Arts,English,80,0,33,100,80
+5,Ananya Mishra,Rajesh Mishra,2007-01-30,Female,1005,CIOS/2024/1005,12,2024-25,Arts,History,88,0,33,100,88
+5,Ananya Mishra,Rajesh Mishra,2007-01-30,Female,1005,CIOS/2024/1005,12,2024-25,Arts,Sociology,85,0,33,100,85
+5,Ananya Mishra,Rajesh Mishra,2007-01-30,Female,1005,CIOS/2024/1005,12,2024-25,Arts,Geography,58,24,33,100,82
+5,Ananya Mishra,Rajesh Mishra,2007-01-30,Female,1005,CIOS/2024/1005,12,2024-25,Arts,Civics,86,0,33,100,86
+6,Neha Chaurasia,Dinesh Chaurasia,2008-11-12,Female,1006,CIOS/2024/1006,10,2024-25,,Hindi,85,0,33,100,85
+6,Neha Chaurasia,Dinesh Chaurasia,2008-11-12,Female,1006,CIOS/2024/1006,10,2024-25,,English,88,0,33,100,88
+6,Neha Chaurasia,Dinesh Chaurasia,2008-11-12,Female,1006,CIOS/2024/1006,10,2024-25,,Home Science,68,25,33,100,93
+6,Neha Chaurasia,Dinesh Chaurasia,2008-11-12,Female,1006,CIOS/2024/1006,10,2024-25,,Science,62,26,33,100,88
+6,Neha Chaurasia,Dinesh Chaurasia,2008-11-12,Female,1006,CIOS/2024/1006,10,2024-25,,Social Science,84,0,33,100,84
+6,Neha Chaurasia,Dinesh Chaurasia,2008-11-12,Female,1006,CIOS/2024/1006,10,2024-25,,Drawing,65,26,33,100,91
