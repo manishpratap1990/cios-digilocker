@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node -e \"const fs=require('fs');const files=fs.readdirSync('.').filter(f=>f.match(/^[a-f0-9]+\\.next\\.config/));files.forEach(f=>{fs.unlinkSync(f);console.log('Cleaned:',f)});fs.rmSync('.next',{recursive:true,force:true});console.log('Cleaned cache')\" && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "db:push": "prisma db push",
