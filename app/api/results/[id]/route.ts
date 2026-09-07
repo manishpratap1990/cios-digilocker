@@ -1,5 +1,6 @@
 import { prisma } from '@/lib/prisma'
 import { calculateResult } from '@/lib/constants'
+import { requireAdmin } from '@/lib/auth'
 
 type Params = { id: string }
 
@@ -10,13 +11,15 @@ export async function GET(
 ) {
   const { id } = await params
   try {
+    await requireAdmin()
     const student = await prisma.student.findUnique({
       where: { id },
       include: { subjects: true, result: true },
     })
     if (!student) return Response.json({ error: 'Not found' }, { status: 404 })
     return Response.json({ student })
-  } catch {
+  } catch (e: unknown) {
+    if ((e as Error).message === 'Unauthorized') return Response.json({ error: 'Unauthorized' }, { status: 401 })
     return Response.json({ error: 'Internal server error' }, { status: 500 })
   }
 }
@@ -28,6 +31,7 @@ export async function PUT(
 ) {
   const { id } = await params
   try {
+    await requireAdmin()
     const body = await request.json()
     const { serialNo, name, guardianName, dateOfBirth, gender, rollNumber, regNumber, cls, academicYear, stream, centreName, subjects } = body
 
@@ -98,6 +102,7 @@ export async function DELETE(
 ) {
   const { id } = await params
   try {
+    await requireAdmin()
     await prisma.student.delete({ where: { id } })
     return Response.json({ success: true })
   } catch {

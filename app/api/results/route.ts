@@ -1,4 +1,5 @@
 import { prisma } from '@/lib/prisma'
+import { requireAdmin } from '@/lib/auth'
 
 // GET /api/results?rollNumber=1001
 // GET /api/results?search=name&page=1&limit=20 (admin)
@@ -28,7 +29,8 @@ export async function GET(request: Request) {
       return Response.json({ student })
     }
 
-    // Admin - list all with optional search
+    // Admin - list all with optional search — requires auth
+    try { await requireAdmin() } catch { return Response.json({ error: 'Unauthorized' }, { status: 401 }) }
     const where = search
       ? {
           OR: [
@@ -61,6 +63,7 @@ export async function GET(request: Request) {
 // POST /api/results - Add result manually (admin)
 export async function POST(request: Request) {
   try {
+    await requireAdmin()
     const body = await request.json()
     const {
       serialNo, name, guardianName, dateOfBirth, gender,
@@ -120,6 +123,7 @@ export async function POST(request: Request) {
 
     return Response.json({ student }, { status: 201 })
   } catch (error) {
+    if ((error as Error).message === 'Unauthorized') return Response.json({ error: 'Unauthorized' }, { status: 401 })
     console.error('Results POST error:', error)
     return Response.json({ error: 'Internal server error' }, { status: 500 })
   }

@@ -1,5 +1,8 @@
 import { parseExcel, groupByRollNumber, validateImportData, generateTemplate, generateCsvTemplate, type StudentImportData } from '@/lib/excel'
 import { prisma } from '@/lib/prisma'
+import { requireAdmin } from '@/lib/auth'
+
+const MAX_FILE_SIZE = 10 * 1024 * 1024 // 10MB
 
 // POST /api/import - parse and preview
 export async function POST(request: Request) {
@@ -8,9 +11,11 @@ export async function POST(request: Request) {
 
   try {
     if (action === 'preview') {
+      await requireAdmin()
       const formData = await request.formData()
       const file = formData.get('file') as File
       if (!file) return Response.json({ error: 'No file provided' }, { status: 400 })
+      if (file.size > MAX_FILE_SIZE) return Response.json({ error: 'File too large. Max 10MB allowed.' }, { status: 413 })
 
       const buffer = Buffer.from(await file.arrayBuffer())
       const rows = parseExcel(buffer)
@@ -21,6 +26,7 @@ export async function POST(request: Request) {
     }
 
     if (action === 'confirm') {
+      await requireAdmin()
       const body = await request.json() as { students: StudentImportData[] }
       const { students } = body
 

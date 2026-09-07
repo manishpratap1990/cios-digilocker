@@ -1,4 +1,5 @@
 import { prisma } from '@/lib/prisma'
+import { requireAdmin } from '@/lib/auth'
 
 type Params = { id: string }
 
@@ -9,6 +10,7 @@ export async function POST(
 ) {
   const { id } = await params
   try {
+    await requireAdmin()
     const result = await prisma.result.findUnique({ where: { studentId: id } })
     if (!result) return Response.json({ error: 'Result not found' }, { status: 404 })
 
@@ -25,6 +27,7 @@ export async function POST(
     })
     return Response.json({ result: updated })
   } catch (error) {
+    if ((error as Error).message === 'Unauthorized') return Response.json({ error: 'Unauthorized' }, { status: 401 })
     console.error('Revoke error:', error)
     return Response.json({ error: 'Internal server error' }, { status: 500 })
   }
