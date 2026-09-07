@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prebuild": "node -e \"const fs=require('fs');const files=fs.readdirSync('.').filter(f=>f.match(/^[a-f0-9]+\\.next\\.config/));files.forEach(f=>{fs.unlinkSync(f);console.log('Cleaned:',f)})\"",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -36,7 +37,7 @@
     "@types/qrcode": "^1.5.5",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^10.10.0",
+    "eslint": "^9.0.0",
     "eslint-config-next": "^16.3.4",
     "tailwindcss": "^4",
     "ts-node": "^10.9.2",
