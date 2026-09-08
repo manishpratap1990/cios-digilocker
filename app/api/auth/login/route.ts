@@ -10,7 +10,14 @@ export async function POST(request: Request) {
       return Response.json({ error: 'Username and password are required' }, { status: 400 })
     }
 
-    const admin = await prisma.admin.findUnique({ where: { username } })
+    const admin = await prisma.admin.findFirst({
+      where: {
+        username: {
+          equals: username.trim(),
+          mode: 'insensitive',
+        },
+      },
+    })
 
     if (!admin) {
       return Response.json({ error: 'Invalid credentials' }, { status: 401 })
