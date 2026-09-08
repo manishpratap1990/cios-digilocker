@@ -155,42 +155,6 @@ export default function HomePage() {
               </button>
             </form>
 
-            {/* Demo Student Roll Numbers Helper */}
-            <div style={{ marginTop: '1.5rem', paddingTop: '1.25rem', borderTop: '1px dashed #e2e8f0' }}>
-              <p style={{ fontSize: '0.75rem', fontWeight: 600, color: '#64748b', textAlign: 'center', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                Demo Student Roll Numbers (Click to test)
-              </p>
-              <div style={{ display: 'flex', gap: '0.35rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                {[
-                  { roll: '1001', label: '1001 (10th Pass)' },
-                  { roll: '1002', label: '1002 (12th Sci)' },
-                  { roll: '1003', label: '1003 (8th Pass)' },
-                  { roll: '1004', label: '1004 (12th Com)' },
-                  { roll: '1005', label: '1005 (12th Arts)' },
-                  { roll: '1006', label: '1006 (10th Distinction)' },
-                ].map((item) => (
-                  <button
-                    key={item.roll}
-                    type="button"
-                    onClick={() => handleQuickTest(item.roll)}
-                    style={{
-                      background: rollNumber === item.roll ? '#1e3a5f' : '#f1f5f9',
-                      color: rollNumber === item.roll ? '#ffffff' : '#334155',
-                      border: '1px solid #cbd5e1',
-                      borderRadius: '0.375rem',
-                      padding: '0.25rem 0.5rem',
-                      fontSize: '0.72rem',
-                      fontWeight: 600,
-                      cursor: 'pointer',
-                      transition: 'all 0.15s ease',
-                    }}
-                  >
-                    {item.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
             {/* Admin Panel Link */}
             <div style={{ textAlign: 'center', marginTop: '1.25rem', paddingTop: '1rem', borderTop: '1px solid #f1f5f9' }}>
               <Link

@@ -99,12 +99,6 @@ export default function AdminLoginPage() {
             </Link>
           </div>
         </div>
-
-        <div style={{ marginTop: '1rem', padding: '0.75rem 1rem', background: 'rgba(255,255,255,0.1)', borderRadius: '0.75rem', backdropFilter: 'blur(10px)' }}>
-          <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.75rem', textAlign: 'center' }}>
-            Default credentials — <strong>admin</strong> / <strong>admin123</strong>
-          </p>
-        </div>
       </div>
     </main>
   )
