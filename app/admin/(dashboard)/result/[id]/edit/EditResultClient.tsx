@@ -35,6 +35,7 @@ export default function EditResultClient({ student }: { student: Student }) {
         gender: student.gender || '',
         rollNumber: student.rollNumber,
         regNumber: student.regNumber || '',
+        class: student.class,
         cls: student.class,
         academicYear: student.academicYear,
         stream: student.stream || '',

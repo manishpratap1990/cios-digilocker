@@ -21,7 +21,8 @@ interface FormData {
   gender: string
   rollNumber: string
   regNumber: string
-  class: string
+  class?: string
+  cls: string
   academicYear: string
   stream: string
   centreName: string
@@ -29,7 +30,7 @@ interface FormData {
 }
 
 interface Props {
-  initialData?: Partial<FormData> & { id?: string }
+  initialData?: Partial<FormData> & { id?: string; class?: string; cls?: string }
   mode: 'create' | 'edit'
 }
 
@@ -43,7 +44,8 @@ export default function ResultForm({ initialData, mode }: Props) {
     gender: initialData?.gender || '',
     rollNumber: initialData?.rollNumber || '',
     regNumber: initialData?.regNumber || '',
-    cls: initialData?.cls || '10',
+    class: initialData?.class || initialData?.cls || '10',
+    cls: initialData?.cls || initialData?.class || '10',
     academicYear: initialData?.academicYear || '2024-25',
     stream: initialData?.stream || '',
     centreName: initialData?.centreName || '',
