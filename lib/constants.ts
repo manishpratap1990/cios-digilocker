@@ -84,5 +84,6 @@ export const GAZETTE_RED_LINE_1 = '(खण्ड 68 इलाहाबाद, �
 export const GAZETTE_RED_LINE_2 = '(पेज सं० 621 उत्तर प्रदेश गज़ट, 8 फरवरी 2014 ई० (माघ 19, 1935 शक सम्वत्) भाग 1-क)'
 
 export const DOMAIN = process.env.NEXT_PUBLIC_BASE_URL || 'https://digilocker.ciosupresult.org'
+export const INSTITUTE_DOMAIN = 'www.ciosup.org'
 export const INSTITUTE_ADDRESS = 'कार्यालय एवं सूचनार्थ भवन 105/224 फुलबाग, हुसैनगंज, पुराना किला लखनऊ, उ०प्र०'
 export const COLLEGE_TAGLINE = 'CIOS Digilocker Digital Result Portal'
